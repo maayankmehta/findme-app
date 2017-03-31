@@ -20,11 +20,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var map: MKMapView!
     
+     var locationManager = CLLocationManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userlocation = locations[0]
+        let latitude = userlocation.coordinate.latitude
+        let longitude = userlocation.coordinate.longitude
+        let latdelta : CLLocationDegrees = 0.005
+        let londelta : CLLocationDegrees = 0.005
+        let span = MKCoordinateSpan(latitudeDelta: latdelta, longitudeDelta: londelta)
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
