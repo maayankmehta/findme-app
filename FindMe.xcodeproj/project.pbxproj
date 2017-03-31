@@ -12,6 +12,7 @@
 		EEE92FB51E8E168100D8F6E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE92FB31E8E168100D8F6E7 /* Main.storyboard */; };
 		EEE92FB71E8E168100D8F6E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE92FB61E8E168100D8F6E7 /* Assets.xcassets */; };
 		EEE92FBA1E8E168100D8F6E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE92FB81E8E168100D8F6E7 /* LaunchScreen.storyboard */; };
+		EEE92FC31E8E185700D8F6E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE92FC21E8E185700D8F6E7 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EEE92FB61E8E168100D8F6E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEE92FB91E8E168100D8F6E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEE92FBB1E8E168100D8F6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE92FC21E8E185700D8F6E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE92FC31E8E185700D8F6E7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				EEE92FAE1E8E168100D8F6E7 /* FindMe */,
 				EEE92FAD1E8E168100D8F6E7 /* Products */,
+				EEE92FC11E8E185700D8F6E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				EEE92FBB1E8E168100D8F6E7 /* Info.plist */,
 			);
 			path = FindMe;
+			sourceTree = "<group>";
+		};
+		EEE92FC11E8E185700D8F6E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE92FC21E8E185700D8F6E7 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
