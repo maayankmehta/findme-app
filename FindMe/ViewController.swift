@@ -44,6 +44,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let region = MKCoordinateRegion(center: location, span: span)
         map.setRegion(region, animated: true)
+        
+        latLabel.text = String(latitude)
+        altLabel.text = String(userlocation.altitude)
+        lonLabel.text = String(longitude)
+        speedLabel.text = String(userlocation.speed)
+        courseLabel.text = String(userlocation.course)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
